@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Story</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon" /> -->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* Our Story Section Styles */
+      .our-story-section {
+        background-color: #fff;
+        padding: 80px 0;
+      }
+
+      .section-header {
+        margin-bottom: 60px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .section-subtitle {
+        font-size: 18px;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: justify;
+      }
+
+      .story-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .vision-section,
+      .persona-section {
+        margin-bottom: 40px;
+      }
+
+      .vision-title,
+      .persona-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .vision-title:after,
+      .persona-title:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent-color);
+      }
+
+      .vision-section p,
+      .persona-section p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .image-placeholder {
+        border-radius: 8px;
+        color: #999;
+        font-size: 18px;
+        height: 300px;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .our-story-section {
+          padding: 60px 0;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+
+        .vision-title,
+        .persona-title {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="team-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img
+            src="assets/img/log.jpeg"
+            class="img-responsive"
+            style="padding: 0px 7px 2px -9px; width: 100%; max-width: 140px"
+          />
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>About Us</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="team.html">Our Story </a></li>
+                <li><a href="testimonials.html">Our Philosophy</a></li>
+                <li><a href="team.html">The Velurea Advantage </a></li>
+                <li><a href="team.html">Founder's Message </a></li>
+                <li><a href="team.html">Our Team </a></li>
+                <li><a href="team.html">Media & Press Coverage</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>Services</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="team.html">Customer Loyalty </a></li>
+                <li><a href="testimonials.html">Employee Loyalty</a></li>
+                <li><a href="team.html">Private Membership </a></li>
+                <li><a href="">Employee Engagement </a></li>
+                <li><a href="">Ease of Us </a></li>
+              </ul>
+            </li>
+            <li><a href="portfolio.html">Membership</a></li>
+            <li><a href="pricing.html">Events & Experiences</a></li>
+            <li><a href="blog.html">Partners & Collaborations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Story</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Story</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Our Story Section -->
+      <section id="our-story" class="our-story-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-header">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">
+                  Velurea was founded with a singular vision — to offer an
+                  unmatched standard of luxury lifestyle management services in
+                  India. With decades of experience, our team brings together
+                  the finest global networks, curated experiences, and an
+                  intimate understanding of high-net-worth lifestyles.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+              <div class="story-content">
+                <p>
+                  With decades of experience, our team brings together the
+                  finest global networks, curated experiences, and an intimate
+                  understanding of high-net-worth lifestyles.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="story-image">
+                <!-- Placeholder for story image -->
+                <div class="image-placeholder">
+                  <span>Story Image</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="vision-section mb-5">
+                <h3 class="vision-title">Velurea Vision</h3>
+                <p>
+                  We at Velurea believe that excellent customer service is the
+                  key to success. Our vision is to provide exceptional
+                  facilities to the customers with pioneering solutions,
+                  brilliant employees and distinctive expertise in order to
+                  become the top Corporate Lifestyle Management Provider. We are
+                  technology driven, secure, and scalable service provider in
+                  the industry.
+                </p>
+                <p>
+                  Collaborating with Velurea will give you the freedom to choose
+                  from a wide range of corporate and domestic services with the
+                  highest of the standards. We thrive hard to create and nurture
+                  strong relationships with our customers by providing them with
+                  top-notch Lifestyle Management solutions.
+                </p>
+                <p>
+                  We are deeply committed towards looking after our customers'
+                  needs and know how to prioritize what is important and do the
+                  right thing.
+                </p>
+              </div>
+
+              <div class="persona-section">
+                <h3 class="persona-title">Brand Persona</h3>
+                <p>
+                  Velurea is all about providing quality services to the
+                  customers and creating a positive impact on their lives. Our
+                  products majorly focus on customer satisfaction with
+                  innovative solutions to their problems. Our main goal is to
+                  explore different possibilities, which would ensure the
+                  assistance of exceptional Lifestyle Management service to
+                  different customers according to their requirements.
+                </p>
+                <p>
+                  Moreover, we thrive hard to achieve excellence in our work and
+                  improve on a continuous basis. We are 'Creators' i.e. Velurea
+                  focus mainly on inventing new concepts and also refine
+                  according to customer's tastes and requirement. We usually try
+                  to come up with new and interesting ideas for corporate
+                  Lifestyle Management services and give it a twist according to
+                  the changing trends.
+                </p>
+                <p>
+                  As Creators, our main aim is to create 'Best place to work'
+                  conditions for our customers i.e. employees in various
+                  corporate organizations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Our Story Section -->
+    </main>
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Sailor</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>133 Adam Street,</p>
+              <p>Baner Road,</p>
+              <p>Pune, MH 535022,</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 9876543210</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Terms of service</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Customer Loyalty</a></li>
+              <li><a href="#">Employess Loyalty</a></li>
+              <li><a href="#">Private Membership</a></li>
+              <li><a href="#">Employess Engagement</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Velurea</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed by <a href="https://gptsoftwares.in">GPT Softwares</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

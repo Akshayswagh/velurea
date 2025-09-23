@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Events</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <!-- <link href="assets/img/favicon.png" rel="icon" /> -->
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      /* Custom styles for Events & Experiences section */
+      .events-section {
+        padding: 60px 0;
+        background-color: #f8f9fa;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #2c4964;
+      }
+
+      .section-title p {
+        font-size: 16px;
+        color: #6c757d;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .event-category {
+        margin-bottom: 50px;
+      }
+
+      .event-category h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #2c4964;
+        border-bottom: 2px solid #1977cc;
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+
+      .event-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .event-list li {
+        margin-bottom: 15px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .event-list li:before {
+        content: "•";
+        color: #1977cc;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .venue-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .venue-tag {
+        background-color: #e9ecef;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .event-management-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #2c4964;
+      }
+
+      .upcoming-event-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .event-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .event-details {
+        padding: 20px;
+      }
+
+      .event-date {
+        color: #1977cc;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .event-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .event-description {
+        color: #6c757d;
+        margin-bottom: 15px;
+      }
+
+      .btn-event {
+        background-color: #1977cc;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-event:hover {
+        background-color: #1662a3;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="team-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img
+            src="assets/img/log.jpeg"
+            class="img-responsive"
+            style="padding: 0px 7px 2px -9px; width: 100%; max-width: 140px"
+          />
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>About Us</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="team.html">Our Story </a></li>
+                <li><a href="testimonials.html">Our Philosophy</a></li>
+                <li><a href="team.html">The Velurea Advantage </a></li>
+                <li><a href="team.html">Founder's Message </a></li>
+                <li><a href="team.html">Our Team </a></li>
+                <li><a href="team.html">Media & Press Coverage</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>Services</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="team.html">Customer Loyalty </a></li>
+                <li><a href="testimonials.html">Employee Loyalty</a></li>
+                <li><a href="team.html">Private Membership </a></li>
+                <li><a href="">Employee Engagement </a></li>
+                <li><a href="">Ease of Us </a></li>
+              </ul>
+            </li>
+            <li><a href="portfolio.html">Membership</a></li>
+            <li><a href="pricing.html">Events & Experiences</a></li>
+            <li><a href="blog.html">Partners & Collaborations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Team</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Team</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Events & Experiences Section -->
+      <section id="events" class="events-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Events & Experiences</h2>
+            <p>
+              Discover our exclusive events and premium experiences designed for
+              our distinguished members.
+            </p>
+          </div>
+
+          <!-- Upcoming Events -->
+          <div class="event-category">
+            <h3>Upcoming Events</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="upcoming-event-card">
+                  <div class="event-image">
+                    <img
+                      src="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                      alt="VIP Concert"
+                    />
+                  </div>
+                  <div class="event-details">
+                    <div class="event-date">October 15, 2023 | New York</div>
+                    <h4 class="event-title">VIP Concert Access</h4>
+                    <p class="event-description">
+                      Exclusive backstage passes and premium seating for the
+                      hottest music events.
+                    </p>
+                    <a href="#" class="btn-event">Register Interest</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="upcoming-event-card">
+                  <div class="event-image">
+                    <img
+                      src="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                      alt="Fashion Show"
+                    />
+                  </div>
+                  <div class="event-details">
+                    <div class="event-date">November 5, 2023 | Milan</div>
+                    <h4 class="event-title">Private Fashion Shows</h4>
+                    <p class="event-description">
+                      Front-row access to exclusive fashion presentations with
+                      renowned designers.
+                    </p>
+                    <a href="#" class="btn-event">Register Interest</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="upcoming-event-card">
+                  <div class="event-image">
+                    <img
+                      src="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                      alt="Art Exhibition"
+                    />
+                  </div>
+                  <div class="event-details">
+                    <div class="event-date">December 10, 2023 | Paris</div>
+                    <h4 class="event-title">Private Art Exhibitions</h4>
+                    <p class="event-description">
+                      Curated art viewings with opportunities to meet acclaimed
+                      artists.
+                    </p>
+                    <a href="#" class="btn-event">Register Interest</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="upcoming-event-card">
+                  <div class="event-image">
+                    <img
+                      src="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                      alt="Wellness Retreat"
+                    />
+                  </div>
+                  <div class="event-details">
+                    <div class="event-date">January 20, 2024 | Bali</div>
+                    <h4 class="event-title">Wellness Retreats</h4>
+                    <p class="event-description">
+                      Luxury wellness experiences in serene, exotic locations
+                      worldwide.
+                    </p>
+                    <a href="#" class="btn-event">Register Interest</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Events Gallery -->
+          <div class="event-category">
+            <h3>Past Events Gallery</h3>
+            <p>
+              A curated gallery showcasing our previous exclusive events and
+              member experiences.
+            </p>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <a
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNdi6Gavxh_hhmb3SY4wDfn-mvdtPkvMvKKA&s"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNdi6Gavxh_hhmb3SY4wDfn-mvdtPkvMvKKA&s"
+                    alt="Annual Gala 2023"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlD8f_S5FaibMuB0UdrJ-mwR8zY_8VdX6ISA&s"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlD8f_S5FaibMuB0UdrJ-mwR8zY_8VdX6ISA&s"
+                    alt="Yacht Party Monaco"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a
+                  href="https://media.istockphoto.com/id/597940046/photo/casual-catering-discussion-meeting-colleagues-concept.jpg?s=612x612&w=0&k=20&c=xRC_Vtd_LZ2HsvIyMkmhqAgVeQGV0vX5j-Nj90vPCHQ="
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://media.istockphoto.com/id/597940046/photo/casual-catering-discussion-meeting-colleagues-concept.jpg?s=612x612&w=0&k=20&c=xRC_Vtd_LZ2HsvIyMkmhqAgVeQGV0vX5j-Nj90vPCHQ="
+                    alt="Wine Tasting Tuscany"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgM7G6XYZRTw68XQuEmMeFco8V1cmd6snT5g&s"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgM7G6XYZRTw68XQuEmMeFco8V1cmd6snT5g&s"
+                    alt="Charity Gala London"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a
+                  href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Ksbopt51PLhn9uzWpllVHO61YVThNypviA&s"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6Ksbopt51PLhn9uzWpllVHO61YVThNypviA&s"
+                    alt="Golf Tournament Dubai"
+                  />
+                </a>
+              </div>
+              <div class="gallery-item">
+                <a
+                  href="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                  class="glightbox"
+                  data-gallery="gallery1"
+                >
+                  <img
+                    src="https://cdn-cjhkj.nitrocdn.com/krXSsXVqwzhduXLVuGLToUwHLNnSxUxO/assets/images/optimized/rev-ff94111/spotme.com/wp-content/uploads/2020/07/Hero-1.jpg"
+                    alt="Culinary Experience Paris"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partnered Venues & Clubs -->
+          <div class="event-category">
+            <h3>Partnered Venues & Clubs</h3>
+            <p>
+              Global access to elite clubs, resorts, and event venues
+              exclusively for our members.
+            </p>
+            <div class="venue-list">
+              <span class="venue-tag">Monte Carlo Casino, Monaco</span>
+              <span class="venue-tag">The Ritz Club, London</span>
+              <span class="venue-tag">Marina Bay Sands, Singapore</span>
+              <span class="venue-tag">The Breakers, Palm Beach</span>
+              <span class="venue-tag">St. Regis, Bora Bora</span>
+              <span class="venue-tag">Soho House, Global</span>
+              <span class="venue-tag">Aman Resorts, Worldwide</span>
+              <span class="venue-tag">Four Seasons, Global</span>
+              <span class="venue-tag">Burj Al Arab, Dubai</span>
+              <span class="venue-tag">The Plaza, New York</span>
+            </div>
+          </div>
+
+          <!-- Private Event Management -->
+          <div class="event-category">
+            <h3>Private Event Management</h3>
+            <p>
+              End-to-end planning for personal or corporate luxury events
+              tailored to your specifications.
+            </p>
+            <div class="event-management-features">
+              <div class="feature-card">
+                <h4>Concept Development</h4>
+                <p>
+                  We work with you to create a unique event concept that
+                  reflects your vision and objectives.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Venue Selection</h4>
+                <p>
+                  Access to exclusive venues worldwide, with our expertise in
+                  selecting the perfect location.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Vendor Coordination</h4>
+                <p>
+                  We manage all vendors including catering, entertainment,
+                  decor, and technical requirements.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Guest Management</h4>
+                <p>
+                  Comprehensive guest list management, invitations, RSVPs, and
+                  special requirements handling.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>On-site Execution</h4>
+                <p>
+                  Our team ensures flawless execution on the day of your event,
+                  managing all logistics.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>Post-Event Follow-up</h4>
+                <p>
+                  We handle thank-you notes, feedback collection, and
+                  documentation of your memorable event.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Events & Experiences Section -->
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Sailor</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>133 Adam Street,</p>
+              <p>Baner Road,</p>
+              <p>Pune, MH 535022,</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+91 9876543210</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Terms of service</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Customer Loyalty</a></li>
+              <li><a href="#">Employess Loyalty</a></li>
+              <li><a href="#">Private Membership</a></li>
+              <li><a href="#">Employess Engagement</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Velurea</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed by <a href="https://gptsoftwares.in">GPT Softwares</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Initialize GLightbox for gallery
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = GLightbox({
+          selector: ".glightbox",
+        });
+      });
+    </script>
+  </body>
+</html>
