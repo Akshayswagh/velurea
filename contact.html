@@ -173,6 +173,85 @@
     .contact-social-links a:hover {
       color: var(--accent-color, #007bff);
     }
+    
+    /* Additional styles for the new contact section */
+    .contact-section {
+      padding: 60px 0;
+    }
+    
+    .contact-section h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .contact-section .contact-info {
+      margin-bottom: 40px;
+    }
+    
+    .contact-section .contact-info h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .contact-section .contact-info p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    
+    .contact-section .contact-info .social-links {
+      margin-top: 20px;
+    }
+    
+    .contact-section .contact-info .social-links a {
+      font-size: 1.5rem;
+      display: inline-block;
+      color: #777;
+      line-height: 1;
+      margin-right: 15px;
+      transition: 0.3s;
+    }
+    
+    .contact-section .contact-info .social-links a:hover {
+      color: var(--accent-color, #007bff);
+    }
+    
+    .consultation-btn {
+      background: var(--accent-color, #007bff);
+      border: 0;
+      padding: 12px 35px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+    .consultation-btn:hover {
+      background: var(--accent-color-dark, #0056b3);
+      color: #fff;
+    }
+    
+    .map-container {
+      height: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
   </style>
 
@@ -223,7 +302,7 @@
             <li><a href="events.html">Events & Experiences</a></li>
             <li><a href="colaborations.html">Partners & Collaborations</a></li>
             <li><a href="comingsoon.html">Blogs</a></li>
-            <li><a href="comingsoon.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -244,168 +323,128 @@
         </nav>
       </div>
     </div><!-- End Page Title -->
-
-    <!-- Contact Section - Redesigned with Form and Details -->
-    <section id="contact" class="contact section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 mb-5">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-description">Have a question or want to collaborate? Fill out the form below or find our contact details.</p>
+    
+    <!-- Foot Print Section -->
+    <section id="footprint" class="footprint-section">
+      <div class="container">
+        <h2 class="footprint-title">Our Foot Print</h2>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="footprint-description">
+              <p>Velurea was established in the year 2010, headquartered at Mumbai. We are a 'Leading' and 'Premium' service provider in the Lifestyle Management industry. We are an entirely owned and self-operated chain of Lifestyle Managements and work across 12 major cities in the South Asia Pacific region and 25+ cities in India.</p>
+              <p>We are currently serving DQ Top 100 clients across the country. We also serve geographically divided companies across many industry verticals today. Our main goal is to expand our services to other areas as well and try to increase our global footprint.</p>
+              <p>We manage 'Work-Life Balance' and address key issues arising out of irregularities while managing work and life. Velurea has the capability of servicing 7500 requests monthly across 60 client sites, at 10 cities in the Country.</p>
+            </div>
           </div>
         </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6">
-            <h3 class="mb-4">Send Us a Message</h3>
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+        
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="footprint-info-card d-flex">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <h4>Address</h4>
+                <p>Velurea Hospitality LLP<br>
+                  133 Adam Street, Baner Road,<br>
+                  Pune, MH 535022</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="footprint-info-card d-flex">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>info@velurea.com<br>
+                  support@velurea.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="footprint-info-card d-flex">
+              <i class="bi bi-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 9876543210<br>
+                  +91 9876543211</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="map-container">
+              <!-- Embedded Google Map -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.265476678372!2d73.77856131489363!3d18.5640729873848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf8c6d3d7b3d%3A0x4f3b3e3e3e3e3e3e!2sBaner%20Rd%2C%20Baner%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1641234567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p class="text-center mb-5" style="font-size: 1.2rem; color: #555;">We'd Love to Hear From You</p>
+        
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="php-email-form">
+              <h3 class="mb-4">Enquiry Form</h3>
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
                 </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                 </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="text-center mt-4">
                   <button type="submit">Send Message</button>
                 </div>
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-          <div class="col-lg-6">
-            <h3 class="mb-4">Our Contact Information</h3>
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Office Locations</h3>
-                <p><strong>Velurea Headquarters:</strong> Mumbai, India</p>
-                <p>
-                  Additional offices across 12 major cities in South Asia Pacific region and 25+ cities in India.
-                </p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Phone Number</h3>
-                <p>+91 98765 43210</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Address</h3>
-                <p>contact@velurea.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-share flex-shrink-0"></i>
-              <div>
-                <h3>Social Media</h3>
-                <div class="contact-social-links d-flex mt-2">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="mt-4 map-container" data-aos="fade-up" data-aos-delay="700">
-              <h3 class="mb-3">Find Us on the Map</h3>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.525640239804!2d72.8774263152876!3d19.07609098702796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63e5cce9737%3A0x4a45e0dfe99f9e21!2sMumbai%20Headquarters!5e0!3m2!1sen!2sin!4v1586346304226!5m2!1sen!2sin" 
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div><!-- End Google Maps -->
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-    <!-- Foot Print Section - (Kept as separate as it's more about company scale than direct contact) -->
-    <section id="footprint" class="footprint-section section">
-      <div class="container" data-aos="fade-up">
-        <h2 class="footprint-title">Our Global Footprint</h2>
-
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6">
-            <div class="footprint-description">
-              <p>
-                <strong>Velurea</strong> was established in the year <strong>2010</strong>, headquartered in **Mumbai**. We are a leading and premium service provider in the Lifestyle Management industry, operating an entirely owned and self-operated chain.
-              </p>
-              <p>
-                Our presence spans across <strong>12 major cities in the South Asia Pacific region</strong> and over <strong>25+ cities in India</strong>. We are proud to currently serve <strong>DQ Top 100 clients</strong> nationwide and geographically divided companies across various industry verticals.
-              </p>
-              <p>
-                Our main goal is to expand our services further and increase our global footprint. We efficiently manage 'Work-Life Balance' and address key issues arising from irregularities in managing work and life. Velurea boasts the capability of servicing <strong>7,500 requests monthly</strong> across <strong>60 client sites</strong> in <strong>10 cities</strong> in India.
-              </p>
+              </form>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="row gy-4">
-              <div class="col-md-6">
-                <div class="footprint-info-card d-flex align-items-start" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h4>Headquarters</h4>
-                    <p>Mumbai, India</p>
-                    <p>Established: 2010</p>
-                  </div>
-                </div>
+          
+          <div class="col-lg-4">
+            <div class="contact-info">
+              <h3>Office Locations</h3>
+              <p><strong>Headquarters:</strong><br>
+                Mumbai, India</p>
+              <p><strong>Regional Offices:</strong><br>
+                Delhi, Bangalore, Hyderabad,<br>
+                Chennai, Kolkata, Ahmedabad</p>
+              
+              <h3 class="mt-4">Phone / Email</h3>
+              <p><i class="bi bi-phone me-2"></i> +91 9876543210</p>
+              <p><i class="bi bi-envelope me-2"></i> info@velurea.com</p>
+              
+              <h3 class="mt-4">Social Media</h3>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
               </div>
-              <div class="col-md-6">
-                <div class="footprint-info-card d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-globe flex-shrink-0"></i>
-                  <div>
-                    <h4>Global Reach</h4>
-                    <p>12+ cities in South Asia Pacific</p>
-                    <p>25+ cities in India</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="footprint-info-card d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-people flex-shrink-0"></i>
-                  <div>
-                    <h4>Clientele</h4>
-                    <p>Serving DQ Top 100 clients</p>
-                    <p>Diverse industry verticals</p>
-                  (Placeholder for Social Media links)                </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="footprint-info-card d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-speedometer2 flex-shrink-0"></i>
-                  <div>
-                    <h4>Service Capability</h4>
-                    <p>7,500 requests monthly</p>
-                    <p>Across 60 client sites in 10 cities</p>
-                  </div>
-                </div>
-              </div>
+              
+              <a href="#" class="consultation-btn">Schedule a Consultation</a>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End Foot Print Section -->
+    </section>
 
   </main>
 
@@ -414,7 +453,7 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">Sailor</span>
+              <span class="sitename">Velurea</span>
             </a>
             <div class="footer-contact pt-3">
               <p>133 Adam Street,</p>
@@ -423,7 +462,7 @@
               <p class="mt-3">
                 <strong>Phone:</strong> <span>+91 9876543210</span>
               </p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
+              <p><strong>Email:</strong> <span>info@velurea.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
               <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -436,10 +475,10 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Membership</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="story.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="membership.html">Membership</a></li>
               <li><a href="#">Terms of service</a></li>
             </ul>
           </div>
@@ -447,10 +486,10 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><a href="#">Customer Loyalty</a></li>
-              <li><a href="#">Employess Loyalty</a></li>
-              <li><a href="#">Private Membership</a></li>
-              <li><a href="#">Employess Engagement</a></li>
+              <li><a href="services.html">Customer Loyalty</a></li>
+              <li><a href="services.html">Employee Loyalty</a></li>
+              <li><a href="services.html">Private Membership</a></li>
+              <li><a href="services.html">Employee Engagement</a></li>
             </ul>
           </div>
 
